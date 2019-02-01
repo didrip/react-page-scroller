@@ -21,6 +21,7 @@ const KEY_DOWN = 40;
 
 export default class ReactPageScroller extends React.Component {
     static propTypes = {
+        initalPage: PropTypes.number,
         animationTimer: PropTypes.number,
         transitionTimingFunction: PropTypes.string,
         pageOnChange: PropTypes.func,
@@ -42,7 +43,7 @@ export default class ReactPageScroller extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { componentIndex: 0, componentsToRenderLength: 0 };
+        this.state = { componentIndex: props.initalPage || 0, componentsToRenderLength: 0 };
         this[previousTouchMove] = null;
         this[scrolling] = false;
     }

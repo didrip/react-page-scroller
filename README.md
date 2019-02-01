@@ -44,6 +44,7 @@ goToPage = (pageNumber) => {
 
 |    Property    | Type |          Description          | Default Value |
 | -------------  | ---- |          -----------          | ------- |
+| initalPage | number | set initial page | 0 |
 | animationTimer  | number | Animation duration in milliseconds | 1000 |
 | transitionTimingFunction      | String | CSS transition timing function name | ease-in-out |
 | pageOnChange  | function | callback on page scroll | |
